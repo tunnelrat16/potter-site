@@ -30,4 +30,10 @@
 li {
     grid-row: 2 / span;
     grid-column: 2 / span 1;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
 }

@@ -1,10 +1,8 @@
 const loading = document.querySelector(".loading")
 const queryString = new URLSearchParams(window.location.search)
-const house = `${queryString.get("house")}`
-const houseTitleCase = `${house[0].toUpperCase()}${house.slice(1)}`
+const characterName = `${queryString.get("student")}`
+console.log(characterName)
 
-const body = document.querySelector("body")
-body.classList.add(house)
 
 function createDiv() {
     const div = document.createElement("div")
@@ -26,14 +24,14 @@ function createStudentList(parsedObject) {
     const ul = document.querySelector(".students")
     ul.append(li)
 }
-
-fetch(`http://hp-api.herokuapp.com/api/characters/house/${queryString.get("house")}`)
+fetch("http://hp-api.herokuapp.com/api/characters/students")
     .then(response => {
         return response.json()
     }).then(parsedResponse => {
-        createDiv(parsedResponse)
+        //createDiv(parsedResponse)
         parsedResponse.forEach(parsedResponse => {
-            createStudentList(parsedResponse)
+            // createStudentList(parsedResponse)
+            console.log(parsedResponse)
         })
     }).catch(error => {
         console.error(error.message)
