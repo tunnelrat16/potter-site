@@ -4,6 +4,9 @@ const queryString = new URLSearchParams(window.location.search)
 const house = `${queryString.get("house")}`
 const houseTitleCase = `${house[0].toUpperCase()}${house.slice(1)}`
 
+const body = document.querySelector("body")
+body.classList.add(house)
+
 function createDiv() {
     const div = document.createElement("div")
     div.classList.add("students")
@@ -21,8 +24,6 @@ function createStudentList(parsedObject) {
     const ul = document.querySelector(".students")
     ul.append(li)
 }
-
-
 
 fetch(`http://hp-api.herokuapp.com/api/characters/house/${queryString.get("house")}`)
     .then(response => {

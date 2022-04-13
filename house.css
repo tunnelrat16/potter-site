@@ -1,18 +1,33 @@
-    html {
-        background: url(background.jpg) no-repeat center center fixed;
-        background-size: cover;
-    }
-    
-    .students {
-        color: black;
-        font-weight: bolder;
-        font-size: 40px;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 15fr;
-    }
-    
-    li {
-        grid-row: 2 / span;
-        grid-column: 2 / span 1;
-    }
+.hufflepuff {
+    background: url("hufflepuff.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.slytherin {
+    background: url("slytherin.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.ravenclaw {
+    background: url("ravenclaw.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.gryffindor {
+    background: url("gryffindor.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.students {
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 15fr;
+}
+
+li {
+    grid-row: 2 / span;
+    grid-column: 2 / span 1;
+}
