@@ -15,23 +15,26 @@ function createDiv() {
     main.append(div)
 }
 
-function createStudentList(parsedObject) {
-    const li = document.createElement("li")
-    li.innerHTML = `
-        <figcaption><a href="student.html?student=${parsedObject.name}">
-        ${parsedObject.name}</a></figcaption>
-    `
-    const ul = document.querySelector(".students")
-    ul.append(li)
+function characterDetail(parsedObject) {
+    const name = parsedObject.name
+    const house = parsedObject.house
+    const ancestry = parsedObject.ancestry
+    const wand = parsedObject.wand.wood + "-" + parsedObject.wand.core
+    const patronus = parsedObject.patronus
+    const imageURL = parsedObject.image
+    return console.log(name, house, ancestry, wand, patronus, imageURL)
 }
+
+
 fetch("http://hp-api.herokuapp.com/api/characters/students")
     .then(response => {
         return response.json()
     }).then(parsedResponse => {
         //createDiv(parsedResponse)
         parsedResponse.forEach(parsedResponse => {
-            // createStudentList(parsedResponse)
-            console.log(parsedResponse)
+            if (parsedResponse.name == characterName) {
+                characterDetail(parsedResponse)
+            }
         })
     }).catch(error => {
         console.error(error.message)

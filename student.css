@@ -1,6 +1,8 @@
+@import url('http://fonts.cdnfonts.com/css/harry-potter');
 html {
-    background: url(potions.jpg) no-repeat center center fixed;
+    background: url(library.jpg) no-repeat center center fixed;
     background-size: cover;
+    font-family: 'Harry Potter', sans-serif;
 }
 
 .houseNames {
