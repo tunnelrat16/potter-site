@@ -1,4 +1,4 @@
-const loading = document.querySelector(".loading")
+const loader = document.querySelector(".loader")
 const queryString = new URLSearchParams(window.location.search)
 const characterName = `${queryString.get("student")}`
 console.log(characterName)
@@ -8,7 +8,7 @@ function createDiv() {
     const div = document.createElement("div")
     div.classList.add("students")
     div.innerHTML = `
-    <h2>${houseTitleCase} Students</h2>
+    <h2>Students</h2>
         <ul class="students"></ul>
     `
     const main = document.querySelector("main")
@@ -25,12 +25,26 @@ function characterDetail(parsedObject) {
     return console.log(name, house, ancestry, wand, patronus, imageURL)
 }
 
+// function createDetailList(parsedObject) {
+//     const li = document.createElement("li")
+//     li.innerHTML = `
+//         <span> Image - ${parsedObject.image} </span>
+//         <span> Name - ${parsedObject.name} </span>
+//         <span> House - ${parsedObject.house} </span>
+//         <span> Ancestry - ${parsedObject.ancestry} </span>
+//         <span> Wand - ${parsedObject.wand.wood} + "-" + ${parsedObject.wand.core} </span>
+//         <span> Patronus - ${parsedObject.patronus} </span>
+//     `
+//     const ul = document.querySelector(".students")
+//     ul.append(li)
+// }
+
 
 fetch("http://hp-api.herokuapp.com/api/characters/students")
     .then(response => {
         return response.json()
     }).then(parsedResponse => {
-        //createDiv(parsedResponse)
+        createDiv(parsedResponse)
         parsedResponse.forEach(parsedResponse => {
             if (parsedResponse.name == characterName) {
                 characterDetail(parsedResponse)

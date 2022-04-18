@@ -1,4 +1,3 @@
-const loading = document.querySelector(".loading")
 const queryString = new URLSearchParams(window.location.search)
 const house = `${queryString.get("house")}`
 const houseTitleCase = `${house[0].toUpperCase()}${house.slice(1)}`
