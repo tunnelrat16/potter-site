@@ -18,10 +18,22 @@ function createDiv() {
 
 function createStudentList(parsedObject) {
     const li = document.createElement("li")
-    li.innerHTML = `
-        <figcaption><a href="student.html?student=${parsedObject.name}">
+    if (parsedObject.name == "James Potter") {
+        li.innerHTML = `
+        <figcaption><a href="404unknown">
         ${parsedObject.name}</a></figcaption>
     `
+    } else if (parsedObject.name == "Lily Potter") {
+        li.innerHTML = `
+        <figcaption><a href="404unknown">
+        ${parsedObject.name}</a></figcaption>
+    `
+    } else {
+        li.innerHTML = `
+    <figcaption><a href="student.html?student=${parsedObject.name}">
+    ${parsedObject.name}</a></figcaption>
+`
+    }
     const ul = document.querySelector(".students")
     ul.append(li)
 }
