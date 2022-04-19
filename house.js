@@ -20,12 +20,12 @@ function createStudentList(parsedObject) {
     const li = document.createElement("li")
     if (parsedObject.name == "James Potter") {
         li.innerHTML = `
-        <figcaption><a href="404unknown">
+        <figcaption><a href="404.html">
         ${parsedObject.name}</a></figcaption>
     `
     } else if (parsedObject.name == "Lily Potter") {
         li.innerHTML = `
-        <figcaption><a href="404unknown">
+        <figcaption><a href="404.html">
         ${parsedObject.name}</a></figcaption>
     `
     } else {

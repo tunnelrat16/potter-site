@@ -6,40 +6,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="icon" type="image/ico" href="favicon.ico"> -->
+    <link rel="icon" type="image/ico" href="favicon.ico">
     <link rel="stylesheet" href="app.css" />
     <script defer src="index.js"></script>
 </head>
 
 <body>
     <header class="welcome">
-        <h1><a href="/">Welcome to Hogwarts</a></h1>
+        <h1><a href="/">Hogwarts Home</a></h1>
     </header>
+    <div class="instructions">
+        <h2>Welcome to the Hogwarts directory of current students and alumni!</h2>
+        <p>To view a list of all students by house, just click on the house logos below. <br>If you would like to jump directly to your favorite Hogwarts student, <br>please enter their name into the text box at the bottom of the page. </p>
+    </div>
     <div>
         <ul class="houseNames">
             <li>
                 <a href="house.html?house=slytherin">
-                    <img src="slytherinlogo.png" class='house' alt="Slytherin Logo">
+                    <img class="firstColumn" src="slytherinlogo.png" class='house' alt="Slytherin Logo">
                 </a>
             </li>
             </li>
             <li>
                 <a href="house.html?house=hufflepuff">
-                    <img src="hufflepufflogo.png" class='house' alt="Hufflepuff Logo">
+                    <img class="secondColumn" src="hufflepufflogo.png" class='house' alt="Hufflepuff Logo">
                 </a>
             </li>
             <li>
                 <a href="house.html?house=ravenclaw">
-                    <img src="ravenclawlogo.png" class='house' alt="Ravenclaw Logo">
+                    <img class="firstColumn" src="ravenclawlogo.png" class='house' alt="Ravenclaw Logo">
                 </a>
             </li>
             <li>
                 <a href="house.html?house=gryffindor">
-                    <img src="gryffindorlogo.png" class='house' alt="Gryffindor Logo">
+                    <img class="secondColumn" src="gryffindorlogo.png" class='house' alt="Gryffindor Logo">
                 </a>
             </li>
         </ul>
     </div>
+    <form action="" method="get" class="form-character">
+        <div class="form-name">
+            <label for="name">Enter character name: </label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div class="form-button">
+            <input type="submit" value="Show me my favorite character!">
+        </div>
+    </form>
 
 </body>
 

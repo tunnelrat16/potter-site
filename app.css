@@ -1,8 +1,21 @@
 @import url('http://fonts.cdnfonts.com/css/harry-potter');
 html {
-    background: url(Hogwarts.jpg) no-repeat center center fixed;
+    background: rgba(0, 0, 0, 0.5) url(Hogwarts.jpg) no-repeat center center fixed;
     background-size: cover;
+    background-blend-mode: darken;
     font-family: 'Harry Potter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(202, 199, 11);
+}
+
+.instructions {
+    color: rgb(202, 199, 11);
+    font-size: 35px;
+    text-align: center;
+    font-weight: 600;
 }
 
 .houseNames {
@@ -10,9 +23,23 @@ html {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 50px;
-    margin-left: 150px;
 }
 
 .houseNames img {
     width: 40%;
+}
+
+.firstColumn {
+    margin-left: 40%;
+}
+
+.secondColumn {
+    margin-left: 10%;
+}
+
+form {
+    color: rgb(202, 199, 11);
+    font-size: 35px;
+    text-align: center;
+    font-weight: 600;
 }

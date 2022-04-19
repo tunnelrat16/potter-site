@@ -1,0 +1,26 @@
+@import url('http://fonts.cdnfonts.com/css/harry-potter');
+html {
+    background: rgba(0, 0, 0, 0.8) url(404image.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Harry Potter', sans-serif;
+    background-blend-mode: darken;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(238, 52, 5);
+}
+
+form {
+    color: rgb(238, 52, 5);
+    font-size: 35px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.instructions {
+    color: rgb(238, 52, 5);
+    font-size: 35px;
+    text-align: center;
+    font-weight: 600;
+}

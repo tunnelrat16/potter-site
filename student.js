@@ -24,6 +24,7 @@ function listImage(parsedObject) {
         ul.append(li)
     } else {
         const div = document.createElement("div")
+        div.classList.add("picture")
         const ul = document.querySelector(".character")
         div.innerHTML = `
         <figure>
@@ -33,16 +34,6 @@ function listImage(parsedObject) {
     `
         ul.append(div)
     }
-}
-
-
-function listName(parsedObject) {
-    const li = document.createElement("li")
-    const ul = document.querySelector(".character")
-    li.innerHTML = `
-        <span> Name: ${parsedObject.name} </span>
-`
-    ul.append(li)
 }
 
 function listHouse(parsedObject) {
@@ -80,7 +71,7 @@ function listWand(parsedObject) {
     } else {
         const woodTitleCase = `${parsedObject.wand.wood[0].toUpperCase()}${parsedObject.wand.wood.slice(1)}`
         li.innerHTML = `
-        <span> Wand - ${woodTitleCase} - ${parsedObject.wand.core} </span>
+        <span> Wand: ${woodTitleCase} - ${parsedObject.wand.core} </span>
 `
     }
     ul.append(li)
@@ -96,7 +87,7 @@ function listPatronus(parsedObject) {
     } else {
         const patronusTitleCase = `${parsedObject.patronus[0].toUpperCase()}${parsedObject.patronus.slice(1)}`
         li.innerHTML = `
-        <span> Patronus - ${patronusTitleCase} </span>
+        <span> Patronus: ${patronusTitleCase} </span>
 `
     }
     ul.append(li)
@@ -111,7 +102,6 @@ fetch("http://hp-api.herokuapp.com/api/characters")
         parsedResponse.forEach(parsedResponse => {
             if (parsedResponse.name == characterName) {
                 listImage(parsedResponse)
-                    // listName(parsedResponse)
                 listHouse(parsedResponse)
                 listAncestry(parsedResponse)
                 listWand(parsedResponse)
