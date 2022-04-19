@@ -24,3 +24,10 @@ form {
     text-align: center;
     font-weight: 600;
 }
+
+.errorhandling {
+    color: rgba(238, 52, 5, 0.315);
+    font-size: 100px;
+    text-align: center;
+    font-weight: 600;
+}

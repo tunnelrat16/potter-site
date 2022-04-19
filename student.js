@@ -1,4 +1,3 @@
-const loader = document.querySelector(".loader")
 const queryString = new URLSearchParams(window.location.search)
 const characterName = `${queryString.get("student")}`
 
